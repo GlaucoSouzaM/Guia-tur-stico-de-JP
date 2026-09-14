@@ -1,0 +1,109 @@
+[
+    {
+        "id": "farol",
+        "nome": "Farol do Cabo Branco",
+        "categoria": "Natureza",
+        "bairro": "Cabo Branco",
+        "descricao": "Localizado na Ponta do Seixas, o ponto mais oriental das Américas, com vista panorâmica do oceano. Inaugurado em 1972, tem formato triangular estilizado que simboliza uma planta de sisal, uma das forças econômicas históricas da região.",
+        "imagem": "assets/images/Farol do Cabo Branco.jpg",
+        "imagemAlt": "Farol do Cabo Branco",
+        "video": {
+            "poster": "assets/images/posterfaroldocabobranco.jpg",
+            "legenda": "assets/videos/vdcabobranco.vtt",
+            "fontes": [
+                {
+                    "src": "assets/videos/vdcabobranco.webm",
+                    "tipo": "video/webm"
+                },
+                {
+                    "src": "assets/videos/vdcabobranco.mp4",
+                    "tipo": "video/mp4"
+                },
+                {
+                    "src": "assets/videos/vdcabobranco.ogg",
+                    "tipo": "video/ogg"
+                }
+            ]
+        }
+    },
+    {
+        "id": "centro-cultural",
+        "nome": "Centro Cultural São Francisco",
+        "categoria": "Histórico",
+        "bairro": "Centro",
+        "descricao": "Complexo arquitetônico barroco do século XVI, rico em arte sacra e história colonial. Fundado originalmente como Convento de Santo Antônio, preserva azulejos portugueses e talhas douradas.",
+        "imagem": "assets/images/Centro Cultural São Francisco.jpg",
+        "imagemAlt": "Centro Cultural São Francisco, em João Pessoa.",
+        "video": null
+    },
+    {
+        "id": "restaurante-mangai",
+        "nome": "Restaurante Mangai",
+        "categoria": "Gastronomia",
+        "bairro": "Manaíra",
+        "descricao": "Uma das maiores referências da culinária nordestina no Brasil, com enorme variedade de pratos típicos servidos em bufê por quilo, garçons vestidos a caráter e ambiente rústico e acolhedor.",
+        "imagem": "assets/images/Mangai.jpg",
+        "imagemAlt": "Mesa farta em um restaurante regional de João Pessoa com pratos típicos nordestinos, como carne de sol com macaxeira, arroz de queijo coalho e feijão verde.",
+        "video": null
+    },
+    {
+        "id": "praca-antenor-navarro",
+        "nome": "Praça Antenor Navarro",
+        "categoria": "Histórico",
+        "bairro": "Varadouro",
+        "descricao": "Coração do Centro Histórico, com um conjunto de casarões antigos e igrejas, próximo ao tradicional Hotel Globo e à Casa da Pólvora.",
+        "imagem": null,
+        "imagemAlt": "Praça Antenor Navarro",
+        "video": null
+    },
+    {
+        "id": "letreiro-tambau",
+        "nome": "Letreiro João Pessoa (Tambaú)",
+        "categoria": "Praia",
+        "bairro": "Tambaú",
+        "descricao": "Um dos pontos preferidos para fotos na orla, perto da Feirinha de Artesanato de Tambaú.",
+        "imagem": null,
+        "imagemAlt": "Letreiro João Pessoa em Tambaú",
+        "video": null
+    },
+    {
+        "id": "piscinas-seixas",
+        "nome": "Piscinas Naturais do Seixas",
+        "categoria": "Praia",
+        "bairro": "Cabo Branco",
+        "descricao": "Piscinas formadas por recifes, visitáveis apenas na maré baixa, com águas calmas e esverdeadas ideais para snorkel.",
+        "imagem": null,
+        "imagemAlt": "Piscinas Naturais do Seixas",
+        "video": null
+    },
+    {
+        "id": "estacao-cabo-branco",
+        "nome": "Estação Cabo Branco",
+        "categoria": "Cultura",
+        "bairro": "Cabo Branco",
+        "descricao": "Centro de Ciência, Cultura e Artes localizado bem perto do Farol, com exposições e vista para o mar.",
+        "imagem": null,
+        "imagemAlt": "Estação Cabo Branco",
+        "video": null
+    },
+    {
+        "id": "parque-solon-lucena",
+        "nome": "Parque Sólon de Lucena",
+        "categoria": "Natureza",
+        "bairro": "Centro",
+        "descricao": "Espaço verde no centro da cidade, também conhecido como Parque da Lagoa, com pista de caminhada, ciclovia e área de lazer para toda a família.",
+        "imagem": null,
+        "imagemAlt": "Parque Sólon de Lucena",
+        "video": null
+    },
+    {
+        "id": "praia-tambaba",
+        "nome": "Praia de Tambaba",
+        "categoria": "Praia",
+        "bairro": "Conde (região metropolitana)",
+        "descricao": "Uma das praias mais procuradas da Costa do Conde, cercada por falésias e conhecida por sua beleza natural.",
+        "imagem": null,
+        "imagemAlt": "Praia de Tambaba",
+        "video": null
+    }
+]
