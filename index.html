@@ -7,6 +7,7 @@
     <meta name="description"
         content="Guia turístico de João Pessoa, com informações sobre pontos turísticos, avaliações e galeria de fotos.">
     <meta name="keywords" content="João Pessoa, turismo, pontos turísticos, avaliações, galeria de fotos">
+    <link rel="stylesheet" href="css/style.css">
     <title>Guia turístico</title>
 </head>
 
@@ -19,8 +20,6 @@
             <ul>
                 <li><a href="#destaques">Pontos Turísticos</a></li>
                 <li><a href="#avaliacao">Deixe sua Avaliação</a></li>
-                <li><a href="#fotos">Galeria de Fotos</a></li>
-                <li><a href="#videos">Galeria de Vídeos</a></li>
             </ul>
         </nav>
 
@@ -31,25 +30,46 @@
 
         <section class="destaques" id="destaques">
             <h2>Principais Destaques de João Pessoa</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Lugar</th>
-                        <th>Atração Principal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Farol do Cabo Branco</strong></td>
-                        <td>Localizado na Ponta do Seixas, o ponto mais oriental das Américas, com vista panorâmica do
-                            oceano.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Centro Cultural São Francisco</strong></td>
-                        <td>Complexo arquitetônico barroco do século XVI, rico em arte sacra e história colonial.</td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <div class="destaques-controles">
+                <div class="busca-linha">
+                    <label for="busca-pontos" class="visually-hidden">Buscar ponto turístico</label>
+                    <input type="search" id="busca-pontos" placeholder="Buscar por nome ou palavra-chave...">
+
+                    <button type="button" id="botao-filtros" class="botao-filtros" aria-haspopup="true"
+                        aria-expanded="false" aria-controls="painel-filtros">
+                        <svg class="icone-filtro" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M4 6h16M7.5 12h9M11 18h2" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" fill="none" />
+                        </svg>
+                        Filtros
+                        <span id="contador-filtros" class="contador-filtros" hidden>0</span>
+                    </button>
+                </div>
+
+                <div id="painel-filtros" class="painel-filtros" hidden>
+                    <div class="filtros-grupo">
+                        <span class="filtros-titulo" id="categoria-label">Categoria</span>
+                        <div class="filtros-categoria" id="filtros-categoria" role="group"
+                            aria-labelledby="categoria-label">
+                        </div>
+                    </div>
+
+                    <div class="filtros-grupo">
+                        <span class="filtros-titulo" id="bairro-label">Bairro</span>
+                        <div class="filtros-bairro" id="filtros-bairro" role="group" aria-labelledby="bairro-label">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="lista-pontos" class="lista-pontos" aria-live="polite">
+                <p>Carregando pontos turísticos...</p>
+            </div>
+
+            <div class="ver-mais-container">
+                <button type="button" id="botao-ver-mais" class="botao-ver-mais" hidden>Ver mais</button>
+            </div>
 
             <p>Quer descobrir mais destinos? Acesse o
                 <a href="https://www.gov.br" target="_blank" rel="noopener noreferrer">
@@ -91,8 +111,14 @@
                             <option value="">Selecione...</option>
                             <option value="farol">Farol do Cabo Branco</option>
                             <option value="centro-cultural">Centro Cultural São Francisco</option>
+                            <option value="praca-antenor-navarro">Praça Antenor Navarro</option>
+                            <option value="letreiro-tambau">Letreiro João Pessoa (Tambaú)</option>
+                            <option value="piscinas-seixas">Piscinas Naturais do Seixas</option>
+                            <option value="estacao-cabo-branco">Estação Cabo Branco</option>
+                            <option value="parque-solon-lucena">Parque Sólon de Lucena</option>
+                            <option value="praia-tambaba">Praia de Tambaba</option>
                             <option value="gastronomia">Gastronomia Paraibana</option>
-                            <option value="praia">Praias da Região</option>
+                            <option value="praia">Outras Praias da Região</option>
                         </select>
                     </div>
 
@@ -132,42 +158,6 @@
             </form>
         </section>
 
-        <section class="fotos" id="fotos">
-            <h2>Galeria de Fotos</h2>
-
-            <div class="fotos-container">
-                <h3>Farol do Cabo Branco</h3>
-                <img src="assets/images/Farol do Cabo Branco.jpg" alt="Farol do Cabo Branco" width="500">
-                <p>O Farol do Cabo Branco é um dos cartões-postais mais emblemáticos de João Pessoa, Paraíba, famoso por sua arquitetura única e por estar localizado no ponto mais oriental das Américas (próximo à Ponta do Seixas). Inaugurado em 1972, o farol tem um formato triangular estilizado que simboliza uma planta de sisal, uma das forças econômicas históricas da região.</p>
-            </div>
-            <div class="fotos-container">
-                <h3>Centro Cultural São Francisco</h3>
-                <img src="assets/images/Centro Cultural São Francisco.jpg"
-                    alt="Centro Cultural São Francisco, em João Pessoa." width="500">
-                    <p>Centro cultural são franciscocentro cultural são franciscoO Centro Cultural São Francisco é um dos mais importantes complexos arquitetônicos em estilo barroco do Brasil, localizado no coração do Centro Histórico de João Pessoa, Paraíba. Fundado originalmente no século XVII como Convento de Santo Antônio, o espaço funciona hoje como um centro cultural que preserva uma rica herança de arte sacra, azulejos portugueses e talhas douradas.</p>
-
-            </div>
-            <div class="fotos-container">
-                <h3>Restaurante Mangai</h3>
-                <img src="assets/images/Mangai.jpg"
-                    alt="Mesa farta em um restaurante regional de João Pessoa com pratos típicos nordestinos, como carne de sol com macaxeira, arroz de queijo coalho e feijão verde."
-                    width="500">
-                    <p>O Restaurante Mangai é uma das maiores referências da culinária nordestina no Brasil, famoso por sua enorme variedade de pratos típicos servidos principalmente no sistema de bufê por quilo. Fundado na Paraíba, o Mangai oferece uma verdadeira imersão na cultura do sertão, com garçons vestidos a caráter e um ambiente rústico e acolhedor. A unidade mais tradicional e movimentada da cidade é o Mangai JP Praia.</p>
-            </div>
-
-        </section>
-         <section class="videos" id="videos">
-            <h2>Galeria de videos</h2>
-            <video controls width="400" poster="./assets/images/posterfaroldocabobranco.jpg" preload="none">
-                <source src="./assets/videos/vdcabobranco.webm" type="video/webm">
-                <source src="./assets/videos/vdcabobranco.mp4" type="video/mp4">
-                <source src="./assets/videos/vdcabobranco.ogg" type="video/ogg">
-                <track src="./assets/videos/vdcabobranco.vtt.txt" kind="captions" srclang="pt-br" label="Português"
-                    default>
-                Seu navegador não suporta vídeo HTML5.
-            </video>
-        </section>
-
 
 
     </main>
@@ -175,6 +165,29 @@
     <footer>
         <p>&copy; 2026 Guia Turístico de João Pessoa. Todos os direitos reservados.</p>
     </footer>
+
+    <dialog id="modal-video" class="modal-video">
+        <div class="modal-video-cabecalho">
+            <h3 id="modal-video-titulo">Vídeo</h3>
+            <button type="button" class="fechar-modal" aria-label="Fechar vídeo">&times;</button>
+        </div>
+
+
+        <video id="modal-video-player" controls preload="none">
+            <source id="fonte-webm" src="" type="video/webm">
+            <source id="fonte-mp4" src="" type="video/mp4">
+            <source id="fonte-ogg" src="" type="video/ogg">
+            <track id="modal-video-legenda" kind="captions" srclang="pt-br" label="Português" default>
+            Seu navegador não suporta vídeo HTML5.
+        </video>
+
+        <p id="modal-video-indisponivel" class="modal-video-indisponivel" hidden>
+            Vídeo em breve — ainda não gravamos este ponto turístico.
+        </p>
+
+    </dialog>
+
+    <script src="js/pontos.js" defer></script>
 
 </body>
 
